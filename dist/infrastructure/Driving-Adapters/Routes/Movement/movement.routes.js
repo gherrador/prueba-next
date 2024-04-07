@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.movementRouter = void 0;
+const express_1 = require("express");
+const dependencies_1 = require("../../Implementation/InMemoryImplementation/Movement/dependencies");
+const middleware_1 = require("../../../../middleware");
+exports.movementRouter = (0, express_1.Router)();
+exports.movementRouter.get('/movements/', middleware_1.Middlewares.userLoginMiddleware, middleware_1.Middlewares.cardActivatedMiddleware, middleware_1.Middlewares.changePinMiddleware, dependencies_1.getMovementCtrl.movementGetList);
+exports.movementRouter.post('/deposit/', middleware_1.Middlewares.userLoginMiddleware, middleware_1.Middlewares.cardActivatedMiddleware, middleware_1.Middlewares.changePinMiddleware, dependencies_1.depositMoneyCtrl.depositMoney);
+exports.movementRouter.post('/extract/', middleware_1.Middlewares.userLoginMiddleware, middleware_1.Middlewares.cardActivatedMiddleware, middleware_1.Middlewares.changePinMiddleware, dependencies_1.extractMoneyCtrl.extractMoney);
+exports.movementRouter.post('/transfer/', middleware_1.Middlewares.userLoginMiddleware, middleware_1.Middlewares.cardActivatedMiddleware, middleware_1.Middlewares.changePinMiddleware, dependencies_1.transferMoneyCtrl.tansferMoney);
+exports.default = exports.movementRouter;

@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.accountRouter = void 0;
+const express_1 = require("express");
+const middleware_1 = require("../../../../middleware");
+const dependencies_1 = require("../../Implementation/InMemoryImplementation/Account/dependencies");
+const loginValidator_1 = require("../../../../Schema/loginSchemaValidator/loginValidator");
+exports.accountRouter = (0, express_1.Router)();
+exports.accountRouter.post('/login/', loginValidator_1.loginValidation, dependencies_1.LoginCardCtrl.loginCard);
+exports.accountRouter.put('/activate/', middleware_1.Middlewares.userLoginMiddleware, dependencies_1.activateCardCtrl.activateCard);
+exports.accountRouter.put('/changepin/', middleware_1.Middlewares.userLoginMiddleware, middleware_1.Middlewares.cardActivatedMiddleware, dependencies_1.changePinCtrl.changePin);
+exports.default = exports.accountRouter;

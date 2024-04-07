@@ -1,0 +1,137 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Next-Test",
+    "dateExported": "2024-04-07T13:17:43.420Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "9d0fbf8d-4ca4-47aa-b689-4c33514c70a5",
+            "colId": "944faaca-3d33-4c61-92a5-2c0ed33531df",
+            "containerId": "",
+            "name": "TransferMoney",
+            "url": "http://localhost:3000/transfer/",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-04-07T13:16:59.757Z",
+            "modified": "2024-04-07T13:16:59.757Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"qty\":1000, \n  \"iban_destination\":\"ES123456789\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "c0dfa071-d210-437a-97c9-16bab6bf539a",
+            "colId": "944faaca-3d33-4c61-92a5-2c0ed33531df",
+            "containerId": "",
+            "name": "ExtractMoney",
+            "url": "http://localhost:3000/extract/",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-04-07T13:17:08.712Z",
+            "modified": "2024-04-07T13:17:08.712Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"qty\":2500,\n  \"bank\":\"BBVA\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "f20b5969-3adc-44ad-ab44-d1fef3509864",
+            "colId": "944faaca-3d33-4c61-92a5-2c0ed33531df",
+            "containerId": "",
+            "name": "ActivateCard",
+            "url": "http://localhost:3000/activate/",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-04-07T13:17:17.057Z",
+            "modified": "2024-04-07T13:17:17.057Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"IBAN\": \"ES987654321\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "3f8dcc74-ee7a-488d-b705-dc23421693d1",
+            "colId": "944faaca-3d33-4c61-92a5-2c0ed33531df",
+            "containerId": "",
+            "name": "login",
+            "url": "http://localhost:3000/login/",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-04-07T13:17:21.629Z",
+            "modified": "2024-04-07T13:17:21.629Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"IBAN\": \"ES987654321\",\n  \"type\": \"credit\",\n  \"pin\": \"NikolaTesla\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7b4fbdfb-f43d-410a-84b6-59180b3d7e18",
+            "colId": "944faaca-3d33-4c61-92a5-2c0ed33531df",
+            "containerId": "",
+            "name": "ChangePin",
+            "url": "http://localhost:3000/changepin/",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2024-04-07T13:17:26.978Z",
+            "modified": "2024-04-07T13:17:26.978Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"IBAN\": \"ES987654321\",\n  \"pin\":\"B@arby.2311\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "4cd1037a-df00-4ca7-b025-3e35f42b3818",
+            "colId": "944faaca-3d33-4c61-92a5-2c0ed33531df",
+            "containerId": "",
+            "name": "DepositMoney",
+            "url": "http://localhost:3000/deposit/",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2024-04-07T13:17:31.606Z",
+            "modified": "2024-04-07T13:17:31.606Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"qty\":1500,\n  \"bank\":\"BBVA\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "716d50f6-9ea9-4e90-83ba-009bf1ee03f3",
+            "colId": "944faaca-3d33-4c61-92a5-2c0ed33531df",
+            "containerId": "",
+            "name": "getMovements",
+            "url": "http://localhost:3000/movements/",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2024-04-07T13:17:38.522Z",
+            "modified": "2024-04-07T13:17:38.522Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
