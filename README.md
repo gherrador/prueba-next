@@ -5,7 +5,7 @@ El desafio consta de la creacion de distintas funcionalidades emulando un compor
 
 
 ### Arquitectura de proyecto.
-Proyecto realizado en Typescript mediante aplicacion de clean architecture.
+Proyecto realizado en Typescript y arquitectura DDD.
 
 ![image](./public/image/folders.png)
 
